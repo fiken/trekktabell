@@ -1,6 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <parent>
+	  <groupId>no.topi.parent</groupId>
+	  <artifactId>topi-parent</artifactId>
+	  <version>16</version>
+  </parent>
+
   <groupId>ske.fastsetting.skatt.trekktabell</groupId>
   <artifactId>trekktabell-2018</artifactId>
   <packaging>jar</packaging>
