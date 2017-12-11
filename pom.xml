@@ -35,7 +35,7 @@
   </build>
 
   <scm>
-	  <connection>ssh://git@stash.topi.no:7999/fik/skatteetaten-trekktabell.git</connection>
-	  <developerConnection>ssh://git@stash.topi.no:7999/fik/skatteetaten-trekktabell.git</developerConnection>
+	  <connection>scm:git:ssh://git@stash.topi.no:7999/fik/skatteetaten-trekktabell.git</connection>
+	  <developerConnection>scm:git:ssh://git@stash.topi.no:7999/fik/skatteetaten-trekktabell.git</developerConnection>
   </scm>
 </project>
