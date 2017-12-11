@@ -9,7 +9,7 @@
   <groupId>ske.fastsetting.skatt.trekktabell</groupId>
   <artifactId>trekktabell-2018</artifactId>
   <packaging>jar</packaging>
-  <version>0</version>
+  <version>1-SNAPSHOT</version>
 
   <dependencies>
     <dependency>
@@ -37,6 +37,6 @@
   <scm>
 	  <connection>scm:git:ssh://git@stash.topi.no:7999/fik/skatteetaten-trekktabell.git</connection>
 	  <developerConnection>scm:git:ssh://git@stash.topi.no:7999/fik/skatteetaten-trekktabell.git</developerConnection>
-    <tag>trekktabell-2018-0</tag>
+    <tag>HEAD</tag>
   </scm>
 </project>
