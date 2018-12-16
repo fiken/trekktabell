@@ -1,4 +1,4 @@
-package ske.fastsetting.skatt.trekktabell2018;
+package ske.fastsetting.skatt.trekkrutine2019;
 
 public class Fradrag {
 

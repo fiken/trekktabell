@@ -1,43 +1,43 @@
-package ske.fastsetting.skatt.trekktabell2018;
+package ske.fastsetting.skatt.trekkrutine2019;
 
 public class Konstanter {
 
     /**
      * Inntektsåret dette systemet gjelder for.
      */
-    static final int AAR = 2018;
+    static final int AAR = 2019;
 
     static final long
-            KLASSE1_VANLIG = 54750L,
-            KLASSE2_VANLIG = 54750L,
-            KLASSE1_FINNMARK = 70250L,
-            KLASSE2_FINNMARK = 70250L,
-            TRINN1 = 168900L,
-            TRINN2 = 237900L,
-            TRINN3 = 598050L,
-            TRINN4 = 962050L,
+            KLASSE1_VANLIG = 56550L,
+            KLASSE2_VANLIG = 56550L,
+            KLASSE1_FINNMARK = 72050L,
+            KLASSE2_FINNMARK = 72050L,
+            TRINN1 = 174500L,
+            TRINN2 = 245650L,
+            TRINN3 = 617500L,
+            TRINN4 = 964800L,
             LAV_GRENSE_TRYGDEAVGIFT = beregnLavGrenseTrygdeavgift(),
             HOY_GRENSE_TRYGDEAVGIFT = beregnHoyGrenseTrygdeavgift(),
             AVG_FRI_TRYGDEAVGIFT = 54650L,
             MAX_STFRADRAG = 40000L,
             MIN_ANV_MINSTE_FRADRAG = 3520L,
-            MAX_ANV_MINSTE_FRADRAG = 85897L,
-            MAX_ANV_MINSTE_FRADRAG_PENSJ = 73040L,
+            MAX_ANV_MINSTE_FRADRAG = 88704L,
+            MAX_ANV_MINSTE_FRADRAG_PENSJ = 74844L,
             MIN_MINSTE_FRADRAG = 4000L,
-            MAX_MINSTE_FRADRAG = 97610L,
+            MAX_MINSTE_FRADRAG = 100800L,
             LONNSFRADRAG = 31800L,
             ANV_LONNSFRADRAG = 27984L,
             MAX_SJO_FRADRAG = 80000L;
 
     static final double
-            PROSENT_TRINN1 = 1.4d,
-            PROSENT_TRINN2 = 3.3d,
-            TRINNSKATT_PROSENT3 = 12.4d,
-            TRINNSKATT_PROSENT3_FINNMARK = 10.4d,
-            PROSENT_TRINN4 = 15.4d,
-            FELLES_SKATT_VANLIG = 8.55d,
-            FELLES_SKATT_FINNMARK = 5.05d,
-            SKATTORE = 14.45d,
+            PROSENT_TRINN1 = 1.9d,
+            PROSENT_TRINN2 = 4.2d,
+            TRINNSKATT_PROSENT3 = 13.2d,
+            TRINNSKATT_PROSENT3_FINNMARK = 11.2d,
+            PROSENT_TRINN4 = 16.2d,
+            FELLES_SKATT_VANLIG = 7.85d,
+            FELLES_SKATT_FINNMARK = 4.35d,
+            SKATTORE = 14.15d,
             TRYGDE_PROSENT = 25d,
             LAV_TRYGDEAVG_PROSENT = 5.1d,
             HOY_TRYGDEAVG_PROSENT = 8.2d,
@@ -62,7 +62,7 @@ public class Konstanter {
             OVERSKYTENDE_PROSENT_0100_0200 = 39,
             OVERSKYTENDE_PROSENT_0101_0201 = 47,
             OVERSKYTENDE_PROSENT_6300_6400 = 50,
-            OVERSKYTENDE_PROSENT_6350_6450 = 44,
+            OVERSKYTENDE_PROSENT_6350_6450 = 43,
             OVERSKYTENDE_PROSENT_6500_6600 = 35,
             OVERSKYTENDE_PROSENT_6550_6650 = 40,
             OVERSKYTENDE_PROSENT_6700_6800 = 40,

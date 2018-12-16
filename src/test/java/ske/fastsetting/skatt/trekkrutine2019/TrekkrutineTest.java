@@ -1,4 +1,4 @@
-package ske.fastsetting.skatt.trekktabell2018;
+package ske.fastsetting.skatt.trekkrutine2019;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -8,7 +8,6 @@ import org.junit.Test;
 
 import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -196,6 +195,39 @@ public class TrekkrutineTest {
         System.out.println("Skrevet til fil : " + teller);
     }
 
+    @Test
+    @Ignore
+    public void trekktabellerTilSkatteetatenNo() throws Exception {
+        FileWriter fw = new FileWriter(new File("alleTabelleneIEnFilTilSkatteetatenNo.txt"));
+        int teller = 0;
+
+        for (Tabellnummer tabellnr : Tabellnummer.values()) {
+            if (aktuellTabell(tabellnr)) {
+                for (Periode periode : Periode.values()) {
+                    if (aktuellPeriode(tabellnr, periode)) {
+                        HeleTabellen heleTabellen = Trekkrutine.beregnHeleTabellen(tabellnr, periode);
+                        char per = finnPeriode(periode);
+                        char tabType = finnTabelltype(tabellnr.tabelltype);
+
+                        LinkedHashMap<Long, Long> alleTrekk = heleTabellen.alleTrekk;
+
+                        for (Long grl : alleTrekk.keySet()) {
+                            Long trekk = alleTrekk.get(grl);
+                            fw.write(
+                                tabellnr.name().substring(7, 11) + per + tabType + String.format("%05d", grl) + String
+                                    .format("%05d", trekk) + "\r\n");
+                            teller++;
+                        }
+                    }
+                }
+            }
+        }
+
+        fw.close();
+
+        System.out.println("Skrevet til fil : " + teller);
+    }
+
     private char finnPeriode(Periode periode) {
         switch (periode) {
         case PERIODE_1_MAANED:
@@ -221,5 +253,25 @@ public class TrekkrutineTest {
             return '1';
         }
         return '0';
+    }
+
+    private boolean aktuellTabell(Tabellnummer tabellnummer) {
+        String tabellnavn = tabellnummer.name();
+        if (tabellnavn.startsWith("TABELL_72") || tabellnavn.startsWith("TABELL_02") || tabellnavn.startsWith("TABELL_64") ||
+            tabellnavn.startsWith("TABELL_66") || tabellnavn.startsWith("TABELL_68") || tabellnavn.startsWith("TABELL_74") ||
+            tabellnavn.startsWith("TABELL_76") || tabellnavn.startsWith("TABELL_78") ) {
+            return false;
+        }
+        return true;
+    }
+    private boolean aktuellPeriode(Tabellnummer tabellnummer, Periode periode) {
+        if (tabellnummer.tabelltype == Tabelltype.PENSJONIST) {
+            return periode == Periode.PERIODE_1_MAANED;
+        }
+        if (tabellnummer.tabelltype == Tabelltype.SJØ) {
+            return periode == Periode.PERIODE_1_MAANED || periode == Periode.PERIODE_14_DAGER ||
+                periode == Periode.PERIODE_1_UKE;
+        }
+        return true;
     }
 }
