@@ -35,8 +35,8 @@
   </build>
 
   <scm>
-	  <connection>scm:git:ssh://git@github.com:fiken/trekktabell.git</connection>
-	  <developerConnection>scm:git:ssh://git@github.com:fiken/trekktabell.git</developerConnection>
+	  <connection>scm:git:ssh://git@github.com/fiken/trekktabell.git</connection>
+	  <developerConnection>scm:git:ssh://git@github.com/fiken/trekktabell.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 </project>
