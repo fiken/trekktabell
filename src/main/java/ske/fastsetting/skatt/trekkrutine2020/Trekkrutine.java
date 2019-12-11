@@ -1,6 +1,6 @@
-package ske.fastsetting.skatt.trekkrutine2019;
+package ske.fastsetting.skatt.trekkrutine2020;
 
-import java.util.*;
+import java.util.LinkedHashMap;
 
 public class Trekkrutine {
 
