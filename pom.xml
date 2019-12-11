@@ -9,7 +9,7 @@
   <groupId>ske.fastsetting.skatt.trekktabell</groupId>
   <artifactId>trekkrutine-2020</artifactId>
   <packaging>jar</packaging>
-  <version>0</version>
+  <version>1-SNAPSHOT</version>
 
   <dependencies>
     <dependency>
@@ -23,6 +23,6 @@
   <scm>
 	  <connection>scm:git:ssh://git@github.com/fiken/trekktabell.git</connection>
 	  <developerConnection>scm:git:ssh://git@github.com/fiken/trekktabell.git</developerConnection>
-    <tag>trekkrutine-2020-0</tag>
+    <tag>HEAD</tag>
   </scm>
 </project>
