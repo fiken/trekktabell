@@ -1,4 +1,4 @@
-package no.skatteetaten.fastsetting.formueinntekt.forskudd.trekkrutine2021;
+package no.skatteetaten.fastsetting.formueinntekt.forskudd.trekkrutine2022;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -90,13 +90,13 @@ public class TrekkrutineTest {
     @Test
     public void kontrollerBeregningAvLavGrenseTrygdeavgift() throws Exception {
         long grenseTrygdeavgiftLavSats = Konstanter.beregnLavGrenseTrygdeavgift();
-        assertEquals(74937L, grenseTrygdeavgiftLavSats);
+        assertEquals(81219L, grenseTrygdeavgiftLavSats);
     }
 
     @Test
     public void kontrollerBeregningAvHoyGrenseTrygdeavgift() throws Exception {
         long grenseTrygdeavgiftHoySats = Konstanter.beregnHoyGrenseTrygdeavgift();
-        assertEquals(88765L, grenseTrygdeavgiftHoySats);
+        assertEquals(95074L, grenseTrygdeavgiftHoySats);
     }
 
     @Test
