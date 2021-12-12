@@ -3,7 +3,7 @@
   <parent>
 	  <groupId>no.topi.parent</groupId>
 	  <artifactId>topi-parent</artifactId>
-	  <version>29</version>
+	  <version>30</version>
   </parent>
 
   <groupId>no.skatteetaten.fastsetting.formueinntekt.forskudd.trekktabell</groupId>
@@ -15,7 +15,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.13.1</version>
+      <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -23,17 +23,9 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.0</version>
-        <configuration>
-          <release>11</release>
-        </configuration>
-      </plugin>
-      <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
-        <version>0.8.5</version>
+        <version>0.8.6</version>
       </plugin>
     </plugins>
   </build>
