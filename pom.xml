@@ -3,7 +3,7 @@
   <parent>
 	  <groupId>no.topi.parent</groupId>
 	  <artifactId>topi-parent</artifactId>
-	  <version>30</version>
+	  <version>32</version>
   </parent>
 
   <groupId>no.skatteetaten.fastsetting.formueinntekt.forskudd.trekktabell</groupId>
