@@ -9,7 +9,7 @@
   <groupId>no.skatteetaten.fastsetting.formueinntekt.forskudd.trekktabell</groupId>
   <artifactId>trekkrutine-2023</artifactId>
   <packaging>jar</packaging>
-  <version>1-SNAPSHOT</version>
+  <version>1</version>
 
   <properties>
     <java.version>17</java.version>
@@ -37,6 +37,6 @@
   <scm>
 	  <connection>scm:git:ssh://git@github.com/fiken/trekktabell.git</connection>
 	  <developerConnection>scm:git:ssh://git@github.com/fiken/trekktabell.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>trekkrutine-2023-1</tag>
   </scm>
 </project>
