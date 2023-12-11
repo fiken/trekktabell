@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>no.skatteetaten.fastsetting.formueinntekt.forskudd.trekktabell</groupId>
-  <artifactId>trekkrutine-2023</artifactId>
+  <artifactId>trekkrutine-2024</artifactId>
   <packaging>jar</packaging>
   <version>2-SNAPSHOT</version>
 
