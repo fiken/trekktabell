@@ -6,8 +6,8 @@
 	  <version>37</version>
   </parent>
 
-  <groupId>no.skatteetaten.fastsetting.formueinntekt.forskudd.trekktabell</groupId>
-  <artifactId>trekkrutine-2025</artifactId>
+  <groupId>no.skatteetaten.fastsetting.formueinntekt.forskudd.trekkrutine</groupId>
+  <artifactId>trekkrutine-2026</artifactId>
   <packaging>jar</packaging>
   <version>1-SNAPSHOT</version>
 
