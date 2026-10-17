@@ -1,21 +1,13 @@
-# Trekkrutine for beregning av forskuddstrekk
+# Trekkrutine for beregning av forskuddstrekk 2014–2016
 
-Disse java-klassene beregner tabelltrekk for inntektsåret 2026.
+Disse java-klassene beregner tabelltrekk for inntektsårene 2014, 2015 og 2016.
 
-Det er metoden `beregnTabelltrekk` i klassen `Trekkrutine` som skal kalles når tabelltrekket skal beregnes.
+Det er metoden `beregnTabelltrekk` i klassen `Trekkrutine` som skal kalles når tabelltrekket skal beregnes. Inntektsåret sendes inn som parameter.
 
-Ønsker man hele tabellen kalles metoden `beregnHeleTabellen`. Denne returnerer et objekt med alle trekkgrunnlag/trekk, samt den overskytende prosenten som hører til den aktuelle tabellen.
+### Kilde
+Rutinen er portert fra Skatteetatens Cobol-trekkrutine (FT4P200T/FT6P200T), dokumentert i TRKRUT14 og trkrut16 (kun tilgjengelig via Internet Archive). Rutinebeskrivelsen for 2015 er ikke tilgjengelig, så satsene for 2015 er utledet fra de publiserte trekktabellene.
 
-### Årlige endringer
-Endringene i skattesatsene for 2026 er lagt inn i klassen `Konstanter`.
+Cobol-programmet regner med fastpunkt-felter: delskattene summeres uavrundet, og bare trekket avrundes. Java-porteringen Skatteetaten laget for 2016 (branch `2016`) avrunder delskattene og avviker derfor med opptil 2 kr fra trekktabellene. Denne versjonen etterligner Cobol-aritmetikken og gir trekk identisk med de publiserte trekktabellene for alle tre år. Det kontrolleres i `TrekkrutineTest`.
 
-Pakkenavnet er endret til 2026 i alle klassene.
-
-ArtifactId i pom-filen er også endret fra 2025 til 2026.
-
-### Fjerne bruk av overskytende prosent
-Trekkrutina har tidligere (før 2025) beregnet forskuddstrekket etter vanlige skatteregler opp til en viss grense. Etter denne grensen benyttet man en angitt prosent. For månedstabeller var denne grensen 99800.  
-Dette ga unøyaktig trekk over denne grensen. Vi fjerner nå bruken av overskytende prosent, og lar trekkrutinen beregne trekket på vanlig måte også over denne grensen.  
-For de som likevel av en eller annen grunn ønsker en overskytende prosent så har vi laget en metode som beregner en omtrentlig overskytende prosent for en tabell `finnOverskytendeProsentForTabell`.  
-Denne bør uansett ikke benyttes på beløp som tilsvarer en årsinntekt lavere enn det høyeste trinnet på trinnskatten, for 2026 1 467 200.
-
+### Overskytende trekk
+Over maks trekkgrunnlag for perioden beregnes overskytende trekk med en fast prosent per tabell, som i Cobol-rutinen.
