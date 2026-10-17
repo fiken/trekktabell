@@ -3,7 +3,7 @@
   <parent>
 	  <groupId>no.topi.parent</groupId>
 	  <artifactId>topi-parent</artifactId>
-	  <version>40</version>
+	  <version>48</version>
   </parent>
 
   <groupId>no.skatteetaten.fastsetting.formueinntekt.forskudd.trekkrutine</groupId>
